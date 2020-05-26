@@ -1,0 +1,27 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name:  cloud-config-center #注册进Eureka服务器的微服务名
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/liverfans-z/springcloud-config.git #GitHub上面的git仓库名字
+          force-pull: true
+          #注意这里，如果访问git文件报Authentication is required but no CredentialsProvider has been registered
+          #则加上这里的用户名和密码
+          username: liverfans-z
+          password: Githubmm1
+          ####搜索目录
+          search-paths:
+            - springcloud-config
+      ####读取分支
+      label: master
+
+#服务注册到eureka地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
