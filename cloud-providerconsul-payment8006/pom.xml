@@ -46,7 +46,7 @@
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
-            <version>RELEASE</version>
+            <version>4.1.12</version>
             <scope>test</scope>
         </dependency>
         <!-- 引入自己定义的api通用包，可以使用Payment支付Entity -->
